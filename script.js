@@ -1,13 +1,13 @@
-console.log("Le script est chargé !");
+// --- LOGIQUE DU DARK MODE ---
 // 1. CIBLER
-const titre = document.querySelector('#titre-principal');
+const themeButton = document.querySelector('#theme-toggle');
 
-// On vérifie s'il existe (pour ne pas créer d'erreur sur les autres pages)
-if (titre) {
+// On vérifie si le bouton existe sur la page actuelle
+if (themeButton) {
   // 2. ÉCOUTER
-  titre.addEventListener('click', () => {
+  themeButton.addEventListener('click', () => {
     // 3. MANIPULER
-    console.log("J'ai cliqué sur le titre !");
-    titre.textContent = "Titre cliqué !";
+    // On ajoute/retire la classe 'dark-mode' sur le body
+    document.body.classList.toggle('dark-mode');
   });
 }
